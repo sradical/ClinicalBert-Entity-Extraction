@@ -1,7 +1,6 @@
 import torch
 import transformers
 from transformers import AutoTokenizer, AutoModel, BertTokenizer, BertModel, AutoTokenizer, AutoModelForMaskedLM
-# #Kaggle_TRAINING_FILE = "../../../MLMedicalNotesNLPChallenge/bert-entity-extraction/ner_dataset.csv"
 NCBI_TRAINING_FILE = '../input/NCBITraining_tagged.csv'
 
 MAX_LEN = 128 # Padding length
