@@ -10,4 +10,3 @@ EPOCHS = 10
 TOKENIZER =  AutoTokenizer.from_pretrained("emilyalsentzer/Bio_ClinicalBERT") # Clinical Bert
 MODEL_PATH = './model.bin'
 
-
