@@ -1,7 +1,7 @@
 import torch
 import transformers
 from transformers import AutoTokenizer, AutoModel, BertTokenizer, BertModel, AutoTokenizer, AutoModelForMaskedLM
-NCBI_TRAINING_FILE = 'ClinicalBert-Entity-Extraction/input/NCBITraining_tagged.csv'
+NCBI_TRAINING_FILE = '../input/NCBITraining_tagged.csv'
 
 MAX_LEN = 128 # Padding length
 TRAIN_BATCH_SIZE = 32
