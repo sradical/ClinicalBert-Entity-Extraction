@@ -58,4 +58,3 @@ class EntityDataset():
                 'target_pos': torch.tensor(target_pos, dtype=torch.long),
                 'target_tag': torch.tensor(target_tag, dtype=torch.long)
                 }
-
