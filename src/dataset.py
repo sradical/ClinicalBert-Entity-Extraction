@@ -51,7 +51,7 @@ class EntityDataset():
         target_pos = target_pos + ([0] * padding_len)
         target_tag = target_tag + ([0] * padding_len)
 
-        return {'text': text,
+        return {
                 'ids' : torch.tensor(ids, dtype = torch.long),
                 'mask': torch.tensor(mask, dtype=torch.long),
                 'token_type_ids': torch.tensor(token_type_ids, dtype=torch.long),

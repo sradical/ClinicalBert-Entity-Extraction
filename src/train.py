@@ -29,7 +29,7 @@ from transformers import get_linear_schedule_with_warmup
 sentences, pos, tag, enc_pos, enc_tag = process_input.inputdata(config.NCBI_TRAINING_FILE)
 
 meta_data = {"enc_pos": enc_pos,
-                 "enc_tag": enc_tag}
+             "enc_tag": enc_tag}
 
 joblib.dump(meta_data, "meta.bin")
 
@@ -49,6 +49,7 @@ print(list(enc_tag.classes_))
 train_dataset = dataset.EntityDataset(texts = train_sentences, pos = train_pos, tag = train_tag)
 valid_dataset = dataset.EntityDataset(texts=test_sentences, pos=test_pos, tag=test_tag)
 print('Lengths of dataset: Train {}, Test {} '.format(len(train_dataset), len(valid_dataset)))
+
 
 # Test tokenization
 # a = train_dataset[32]
