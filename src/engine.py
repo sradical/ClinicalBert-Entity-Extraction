@@ -2,6 +2,7 @@ import torch
 from tqdm import tqdm
 
 def train_fn(data_loader, model, optimizer, device, scheduler):
+    print(f"Training Device {device}")
     model.train()
     final_loss = 0
     for data in tqdm(data_loader, total = len(data_loader)):
