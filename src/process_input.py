@@ -6,6 +6,7 @@ def inputdata(datapath):
     enc_pos = preprocessing.LabelEncoder()
     enc_tag = preprocessing.LabelEncoder()
     # Convert pos and tag to digits
+    df.dropna()
     df.loc[:, 'pos'] = enc_pos.fit_transform(df.loc[:, 'pos'])
     df.loc[:, 'tag'] = enc_tag.fit_transform(df.loc[:, 'tag'])
     # Convert to list of lists grouped by sentences
