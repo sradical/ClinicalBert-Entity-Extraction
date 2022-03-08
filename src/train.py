@@ -102,10 +102,10 @@ optimizer_parameters = [
 optimizer = AdamW(optimizer_parameters, lr=3e-5)
 scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=0, num_training_steps=num_train_steps)
 
-# best_loss = np.Inf
-# for epoch in range(config.EPOCHS):
-#     train_loss = engine.train_fn(train_data_loader, model, optimizer, device, scheduler)
-#     test_loss = engine.eval_fn(valid_data_loader, model, device)
+#best_loss = np.Inf
+#for epoch in range(config.EPOCHS):
+#    train_loss = engine.train_fn(train_data_loader, model, optimizer, device, scheduler)
+#    #test_loss = engine.eval_fn(valid_data_loader, model, device)
 #
 
 
