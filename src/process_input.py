@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn import preprocessing
 
 def inputdata(datapath):
-    df = pd.read_pickle(datapath, encoding="latin-1")
+    df = pd.read_pickle(datapath)
     enc_pos = preprocessing.LabelEncoder()
     enc_tag = preprocessing.LabelEncoder()
     # Convert pos and tag to digits
