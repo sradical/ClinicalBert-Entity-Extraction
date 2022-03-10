@@ -52,7 +52,6 @@ class EntityDataset():
         target_tag = target_tag + ([0] * padding_len)
 
         return {
-                'texts': text,
                 'ids' : torch.tensor(ids, dtype = torch.long),
                 'mask': torch.tensor(mask, dtype=torch.long),
                 'token_type_ids': torch.tensor(token_type_ids, dtype=torch.long),
