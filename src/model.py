@@ -28,9 +28,9 @@ class EntityModel(nn.Module):
         self.out_pos = nn.Linear(768, num_pos)
 
     def forward(self, ids, mask, token_type_ids, target_pos, target_tag):
-        o1, _ = self.bert(input_ids = ids, attention_mask = mask, token_type_ids = token_type_ids)
-        bo_tag = self.bert_drop_1(o1)
-        bo_pos = self.bert_drop_2(o1)
+        output = self.bert(input_ids = ids, attention_mask = mask, token_type_ids = token_type_ids)
+        bo_tag = self.bert_drop_1(output[0])
+        bo_pos = self.bert_drop_2(output[0])
         tag = self.out_tag(bo_tag)
         pos = self.out_pos(bo_pos)
 
