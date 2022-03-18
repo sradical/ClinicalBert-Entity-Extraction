@@ -33,7 +33,7 @@ if __name__ == "__main__":
     print(tokenized_sentence)
     print(encoded_sentence)
 
-    model = model.EntityModel(num_tag=num_tag, num_pos=num_pos)
+    model = model.EntityModel(config.BASE_MODEL, num_tag=num_tag, num_pos=num_pos )
     model.load_state_dict(torch.load(config.MODEL_PATH, map_location=map_location))
     model.to(device)
 

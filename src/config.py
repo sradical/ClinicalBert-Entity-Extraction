@@ -9,7 +9,13 @@ MAX_LEN = 128 # Padding length
 TRAIN_BATCH_SIZE = 32
 VALID_BATCH_SIZE = 8
 EPOCHS = 10
-#TOKENIZER =  AutoTokenizer.from_pretrained("emilyalsentzer/Bio_ClinicalBERT") # Clinical Bert
-TOKENIZER = BertTokenizer.from_pretrained("bert-base-uncased")
-#MODEL_PATH = './model.bin'
-MODEL_PATH = './kaggle_model.bin'
+
+# Clinical Bert
+BASE_MODEL = AutoModel.from_pretrained("emilyalsentzer/Bio_ClinicalBERT", output_hidden_states=True, return_dict=False)
+TOKENIZER =  AutoTokenizer.from_pretrained("emilyalsentzer/Bio_ClinicalBERT")
+MODEL_PATH = './model.bin'
+
+# Bert-Base-uncased
+#transformer_model = BertModel.from_pretrained("bert-base-uncased")
+#TOKENIZER = BertTokenizer.from_pretrained("bert-base-uncased")
+#MODEL_PATH = './kaggle_model.bin'

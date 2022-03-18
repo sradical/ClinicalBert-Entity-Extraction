@@ -17,11 +17,11 @@ def loss_fn(output, target, mask, num_labels):
     return loss
 
 class EntityModel(nn.Module):
-    def __init__(self, num_tag, num_pos):
+    def __init__(self, transformer_model, num_tag, num_pos):
         super(EntityModel, self).__init__()
         self.num_tag = num_tag
         self.num_pos = num_pos
-        self.bert = AutoModel.from_pretrained("emilyalsentzer/Bio_ClinicalBERT", output_hidden_states=True, return_dict=False)
+        self.bert = transformer_model
         self.bert_drop_1 = nn.Dropout(0.3)
         self.bert_drop_2 = nn.Dropout(0.3)
         self.out_tag = nn.Linear(768, num_tag)
