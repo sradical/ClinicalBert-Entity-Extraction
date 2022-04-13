@@ -21,11 +21,11 @@ if __name__ == "__main__":
     num_pos = len(list(enc_pos.classes_))
     num_tag = len(list(enc_tag.classes_))
 
-    #print('#Tag {} #Pos {}'.format(num_tag, num_pos))
-    #print('Tag {}'.format(enc_tag.classes_))
-    #print('Pos {}'.format((enc_pos.classes_)))
+    print('#Tag {} #Pos {}'.format(num_tag, num_pos))
+    print('Tag {}'.format(enc_tag.classes_))
+    print('Pos {}'.format((enc_pos.classes_)))
 
-    sentence = """The risk that is skin tumor is elevated"""
+    sentence = """ My name is Radhika and I live in California """
     tokenized_sentence = config.TOKENIZER.tokenize(sentence)
     encoded_sentence = config.TOKENIZER.encode(sentence)
     sentence = sentence.split()
