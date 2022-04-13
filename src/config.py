@@ -19,6 +19,6 @@ TOKENIZER =  AutoTokenizer.from_pretrained("emilyalsentzer/Bio_ClinicalBERT")
 MODEL_PATH = './model.bin'
 
 # Bert-Base-uncased
-#BASE_MODEL = BertModel.from_pretrained("bert-base-uncased")
-#TOKENIZER = BertTokenizer.from_pretrained("bert-base-uncased")
+# BASE_MODEL = BertModel.from_pretrained("bert-base-uncased")
+# TOKENIZER = BertTokenizer.from_pretrained("bert-base-uncased")
 #MODEL_PATH = './kaggle_model.bin'

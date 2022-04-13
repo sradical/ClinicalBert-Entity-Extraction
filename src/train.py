@@ -64,7 +64,7 @@ print('Lengths of dataset: Train {}, Test {} '.format(len(train_dataset), len(va
 train_data_loader = torch.utils.data.DataLoader(train_dataset, batch_size=config.TRAIN_BATCH_SIZE, num_workers=4)
 valid_data_loader = torch.utils.data.DataLoader(valid_dataset, batch_size=config.VALID_BATCH_SIZE, num_workers=1)
 
-model = model.EntityModel(num_tag = num_tag, num_pos = num_pos)
+model = model.EntityModel(config.BASE_MODEL, num_tag = num_tag, num_pos = num_pos)
 print('** GPU ** {}'.format(torch.cuda.is_available()))
 if torch.cuda.is_available():
     device = torch.device("cuda")
