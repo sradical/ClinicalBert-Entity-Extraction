@@ -19,11 +19,11 @@ Kaggle_TRAINING_FILE = '../input/KaggleNERDataset.pkl'
 #MODEL_PATH = './model.bin'
 
 # DistilBert
-BASE_MODEL = DistilBertModel.from_pretrained("distilbert-base-uncased")
-TOKENIZER = DistilBertTokenizer.from_pretrained('distilbert-base-uncased')
-MODEL_PATH = './distilbertmodel.bin'
+#BASE_MODEL = DistilBertModel.from_pretrained("distilbert-base-uncased")
+#TOKENIZER = DistilBertTokenizer.from_pretrained('distilbert-base-uncased')
+#MODEL_PATH = './distilbertmodel.bin'
 
 # Bert-Base-uncased
-# BASE_MODEL = BertModel.from_pretrained("bert-base-uncased")
-# TOKENIZER = BertTokenizer.from_pretrained("bert-base-uncased")
-#MODEL_PATH = './kaggle_model.bin'
+ BASE_MODEL = BertModel.from_pretrained("bert-base-uncased")
+ TOKENIZER = BertTokenizer.from_pretrained("bert-base-uncased")
+ MODEL_PATH = './kaggle_model.bin'
