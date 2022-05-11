@@ -1,7 +1,7 @@
 import torch
 import transformers
 import spacy
-from transformers import AutoTokenizer, AutoModel, BertTokenizer, BertModel, AutoTokenizer, AutoModelForMaskedLM
+from transformers import AutoTokenizer, AutoModel, DistilBertTokenizer, DistilBertModel, BertTokenizer, BertModel, AutoTokenizer, AutoModelForMaskedLM
 
 
 MAX_LEN = 128 # Padding length
@@ -14,9 +14,14 @@ NCBI_TRAINING_FILE = '../input/NCBITraining_tagged.pkl'
 Kaggle_TRAINING_FILE = '../input/KaggleNERDataset.pkl'
 
 # Clinical Bert
-BASE_MODEL = AutoModel.from_pretrained("emilyalsentzer/Bio_ClinicalBERT", output_hidden_states=True, return_dict=False)
-TOKENIZER =  AutoTokenizer.from_pretrained("emilyalsentzer/Bio_ClinicalBERT")
-MODEL_PATH = './model.bin'
+#BASE_MODEL = AutoModel.from_pretrained("emilyalsentzer/Bio_ClinicalBERT", output_hidden_states=True, return_dict=False)
+#TOKENIZER =  AutoTokenizer.from_pretrained("emilyalsentzer/Bio_ClinicalBERT")
+#MODEL_PATH = './model.bin'
+
+# DistilBert
+BASE_MODEL = DistilBertModel.from_pretrained("distilbert-base-uncased")
+TOKENIZER = DistilBertTokenizer.from_pretrained('distilbert-base-uncased')
+MODEL_PATH = './distilbertmodel.bin'
 
 # Bert-Base-uncased
 # BASE_MODEL = BertModel.from_pretrained("bert-base-uncased")
