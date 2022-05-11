@@ -3,7 +3,6 @@ import transformers
 import spacy
 from transformers import AutoTokenizer, AutoModel, DistilBertTokenizer, DistilBertModel, BertTokenizer, BertModel, AutoTokenizer, AutoModelForMaskedLM
 
-
 MAX_LEN = 128 # Padding length
 TRAIN_BATCH_SIZE = 32
 VALID_BATCH_SIZE = 8
